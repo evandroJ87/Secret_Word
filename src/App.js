@@ -1,7 +1,11 @@
-
+// CSS
 import './App.css';
+// React
+import { useCallback, useEffect, useState } from 'react';
+// data
+import {wordsList} from "./data/words"
 import StartScreen from './components/StartScreen';
-{/*Etapa 2*/}
+
 
 function App() {
   return (
