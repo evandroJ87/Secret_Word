@@ -3,7 +3,7 @@ import "./GameOver.css"
 const GameOver = ({retry}) => {
   return (
     <div><h1>Game Over</h1>
-    <button onClick={retry} >Finalizar o jogo</button>
+    <button onClick={retry} >Resetar o jogo</button>
     </div>
   )
 }
