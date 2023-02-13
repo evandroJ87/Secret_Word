@@ -31,16 +31,28 @@ function App() {
     //pick a random word
     const word = words[category][Math.floor(Math.random()* words[category].length)]
     console.log(word);
-    return[word, category]
+    return{word, category}
   }
+
 
   //starts the secret word game
   const startGame = ()=>{
     //pick the word and pick the category
-    pickWordAndCategory()
+    const { word, category }= pickWordAndCategory();
+    //create an array of letters
+    let wordLetters= word.split("");
 
+    wordLetters= wordLetters.map((l) => l.toLowerCase())
 
-    setGameStage(stages[1].name)
+    console.log(word, category);
+    console.log(wordLetters);
+
+    //fill states
+    setPickedWord(word);
+    setPickedCategory(category);
+    setLetters(letters);
+
+    setGameStage(stages[1].name);
   };
 
   //process the letter input 
